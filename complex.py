@@ -13,13 +13,13 @@ class Complex(object):
         return Complex(self.real * other.real - self.imag * other.imag, self.real * other.imag + other.real * self.imag)
     
     def __str__(self):
-        if self.real == 0 and self.imag == 0:
-            return '0'
+        if self.imag == 0:
+            return f'{self.real}'
         
         if self.real == 0:
             return f'{self.imag}i'
         
-        if self.imag == 0:
-            return f'{self.real}'
-        
         return f'{self.real}' + f' + {self.imag}i' if self.imag > 0 else f' - {abs(self.imag)}i'
+
+if __name__ == "__main__": 
+    print("Please run the main.py file")

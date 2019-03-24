@@ -5,7 +5,6 @@ class Polynomial(object):
         
         if coef[deg] == 0:
             raise Exception(f'A polynomial should have a non-zero leading coefficient')
-
         else:
             self.deg = deg
             self.coef = coef
@@ -61,6 +60,10 @@ class Polynomial(object):
     def __mult__(self, other):
         raise NotImplementedError('Polynomial multiplication is not implementated yet')
     
+    @staticmethod
+    def interpolation(points):
+        return 0
+    
     def __pow__(self, power):
         raise NotImplementedError('') # Will use Pascal's Triangle for fast computation
 
@@ -99,3 +102,6 @@ class Polynomial(object):
             string += f' - {coef_mag[0]}'
 
         return string
+
+if __name__ == "__main__": 
+    print("Please run the main.py file")
